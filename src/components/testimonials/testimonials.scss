@@ -1,0 +1,54 @@
+@import "../../assets/style/vars.scss";
+
+.testimonials {
+    &__container {
+        width: 40%;
+        padding-bottom: 4rem;
+    }
+
+    .swiper-pagination-clickable .swiper-pagination-bullet {
+     background-color: $primary_color;
+    }
+
+    .client__avatar {
+        width: 4rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        border: 0.4rem solid $variant_primary_color;
+    }
+
+    .client__review {
+        display: block;
+        color: $light_color;
+        font-weight: 300;
+        width: 80%;
+        margin: 0.8rem auto 0;
+    }
+
+    .testimonial {
+        background-color: $variant_bg_color;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 2rem;
+        user-select: none;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .testimonials__container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .testimonials__container {
+       width: $container_width_sm;
+    }
+
+    .client__review {
+        width: $container_width_sm;
+    }
+}

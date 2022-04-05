@@ -1,0 +1,22 @@
+@import './vars.scss';
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: $container_width_md;
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: $container_width_sm;
+    }
+
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../assets/style/vars.scss';
+
+nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    padding: 0.7rem 1.7rem;
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    backdrop-filter: blur(15px);
+  
+
+    a {
+        display: flex;
+        color: $light_color;
+        font-size: 1.1rem;
+        background-color: transparent;
+        padding: 0.9rem;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        &.active {
+            background-color: $primary_color;
+            color: $bg_color;
+        }
+
+    }
+    
+}

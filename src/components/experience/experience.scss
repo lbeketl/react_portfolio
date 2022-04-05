@@ -1,0 +1,75 @@
+@import "../../assets/style/vars.scss";
+
+.experience {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        & > div {
+            background-color: $variant_bg_color;
+            padding: 2.4rem 5rem;
+            border-radius: 2rem;
+            transition: $my_transition;
+
+            h3 {
+                text-align: center;
+                margin-bottom: 2rem;
+                color: $primary_color;
+            }
+
+            &:hover {
+                background: transparent;
+                border: 1px solid $variant_primary_color;
+                cursor: default;
+            }
+        }
+    }
+
+    &__details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+
+        .details-item {
+            display: flex;
+        }
+
+        .details-icon {
+            margin-top: 6px;
+            margin-right: 10px;
+            color: $primary_color;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .experience {
+        &__container {
+            grid-template-columns: 1fr;
+
+            & > div {
+                width: 80%;
+                padding: 2rem;
+                margin: 0 auto;
+            }
+        }
+
+        &__content {
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .experience {
+      &__container {
+          gap: 1rem;
+
+          & > div {
+            width: 100%;
+            padding: 2rem 1rem; 
+        }
+      }
+    }
+}

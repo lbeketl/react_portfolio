@@ -1,0 +1,69 @@
+@import "../../assets/style/vars.scss";
+
+.footer {
+    background-color: $primary_color;
+    padding: 3rem 0 8rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+
+    a {
+        color: $bg_color;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__logo {
+        img {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto;
+        }
+    }
+
+    .permalinks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0 auto;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 3rem;
+
+        a {
+            background: $bg_color;
+            color: $white_color;
+            padding: 0.8rem;
+            border-radius: 0.7rem;
+            display: flex;
+            border: 1px solid transparent;
+            transition: $my_transition;
+
+            &:hover {
+                background-color: transparent;
+                color: $bg_color;
+                border-color: $bg_color;
+            }
+        }
+    }
+
+    &__copyright {
+        margin-top: 1.5rem;
+        color: $bg_color;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

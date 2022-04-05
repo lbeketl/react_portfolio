@@ -1,0 +1,72 @@
+@import "../../assets/style/vars.scss";
+
+.services {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+
+        .service {
+            background-color: $variant_bg_color;
+            border-radius: 0 0 2rem 2rem;
+            border: 1px solid $primary_color;
+            height: fit-content;
+            transition: $my_transition;
+
+            &:hover {
+                background-color: transparent;
+                border-color: $variant_primary_color;
+                cursor: default;
+            }
+
+            &__head {
+                background-color: $primary_color;
+                padding: 2rem;
+                border-radius: 0 0 2rem 2rem;
+                box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+
+                h3 {
+                    color: $bg_color;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+
+            &__list {
+                padding: 2rem;
+
+                p {
+                    font-size: 0.9rem;
+                }
+
+                & li {
+                    display: flex;
+                }
+            }
+
+            &__list-icon {
+                color: $primary_color;
+                margin-top: 2px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+   .services__container {
+       grid-template-columns: 1fr 1fr;
+
+       .service {
+           height: auto;
+       }
+   }
+}
+
+@media screen and (max-width: 600px) {
+    .services__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem
+    }
+}

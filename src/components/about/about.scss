@@ -1,0 +1,116 @@
+@import "../../assets/style/vars.scss";
+
+.about {
+    &__container {
+        display: grid;
+        grid-template-columns: 35% 50%;
+        gap: 15%;
+    }
+
+    &__me {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 2rem;
+        background: linear-gradient(
+            45deg,
+            transparent,
+            $primary_color,
+            transparent
+        );
+    }
+
+    &__me-image {
+        border-radius: 2rem;
+        overflow: hidden;
+        transform: rotate(10deg);
+        transition: $my_transition;
+
+        &:hover {
+            transform: rotate(0);
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    &__card {
+        background-color: $variant_bg_color;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        transition: $my_transition;
+
+        h5 {
+            font-size: 0.95rem;
+        }
+
+        small {
+            font-size: 0.7rem;
+            color: $light_color;
+        }
+
+        &:hover {
+            background-color: transparent;
+            border-color: $variant_primary_color;
+            cursor: default;
+        }
+    }
+
+    &__icon {
+        color: $primary_color;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    &__content p {
+        margin: 2rem 0 2.6rem;
+        color: $light_color;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__me {
+        width: 50%;
+        margin: 0 auto 4rem;
+    }
+
+    .about__content > p {
+        margin: 1rem 0 1.5rem;
+    }
+
+    
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about__content {
+        text-align: center;
+
+        & > p {
+            margin: 1.5rem 0;
+        }
+    }
+}

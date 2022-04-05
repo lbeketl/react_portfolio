@@ -1,0 +1,13 @@
+@import '../../assets/style/vars.scss';
+
+
+.scrollTopBtn {
+    border-radius: 50%!important;
+    font-weight: 24pximportant;
+    border: none!important;
+    box-shadow: 0 0 20px rgba($variant_primary_color, 0.2)
+}
+
+.btnIcon {
+    color: $primary_color !important;
+}
